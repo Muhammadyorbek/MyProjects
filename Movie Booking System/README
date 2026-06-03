@@ -1,1 +1,74 @@
+# Movie Ticket System
+
+A comprehensive Movie Booking and Management System built with JavaFX and MySQL. This application provides a seamless experience for both customers to book tickets and buy cinema snacks, and for administrators to manage movies, sessions, and inventory.
+
+## Features
+
+### For Customers
+- **User Authentication:** Secure login and registration system.
+- **Movie Browsing:** Explore a wide range of movies with details.
+- **Cinema & Session Selection:** Choose your preferred cinema, city, and movie session.
+- **Interactive Seat Selection:** Real-time seat availability and selection.
+- **Online Shop:** Purchase snacks, drinks, and merchandise directly through the app.
+- **Booking & Checkout:** Integrated booking process with payment simulation.
+- **Profile Management:** View and manage user profiles and booking history.
+- **Coupons:** Apply discount coupons to bookings.
+
+### For Administrators
+- **Dashboard:** Overview of system activity.
+- **Movie Management:** Add, update, or remove movies from the listing.
+- **Session Scheduling:** Manage movie showtimes and cinema halls.
+- **Inventory Management:** Manage shop items and stock.
+- **User Management:** Monitor and manage user accounts.
+- **Coupon Management:** Create and track discount coupons.
+
+## Technologies Used
+- **Language:** Java (JDK 25)
+- **UI Framework:** JavaFX 21
+- **Database:** MySQL
+- **Build Tool:** Maven
+
+## Getting Started
+
+### Prerequisites
+- **JDK 25** or higher.
+- **MySQL Server** installed and running.
+- **Maven** for building and running the project.
+
+### Database Setup
+1. Create a MySQL database named `movie_ticket_db`.
+2. Configure your database credentials in `Movie_ticket/src/main/java/com/example/movie_ticket/database/DatabaseConnection.java`:
+   ```java
+   private static final String URL = "jdbc:mysql://localhost:3306/movie_ticket_db";
+   private static final String USER = "your_username";
+   private static final String PASSWORD = "your_password";
+   ```
+3. Ensure the necessary tables are created. (Refer to the DAO classes in `src/main/java/com/example/movie_ticket/database` for schema details if a SQL script is not provided).
+
+### Installation & Running
+1. Clone the repository or download the source code.
+2. Navigate to the project directory:
+   ```bash
+   cd Movie_ticket
+   ```
+3. Build the project using Maven:
+   ```bash
+   mvn clean install
+   ```
+4. Run the application:
+   ```bash
+   mvn javafx:run
+   ```
+   Or run the `Launcher.java` class from your IDE.
+
+## Project Structure
+- `src/main/java/com/example/movie_ticket/`: Main source code.
+  - `database/`: Data Access Objects (DAOs) and database connection.
+  - `model/`: Entity classes representing the data model.
+  - `service/`: Business logic and service layers.
+  - `ui/`: JavaFX controllers and UI screens.
+- `src/main/resources/`: FXML files and static assets (images).
+
+## License
+This project is for educational purposes.
 
